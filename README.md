@@ -12,13 +12,13 @@ This project aims to provide a simple web application where users can input prop
 - User-friendly web interface.
 - Multiple machine learning models to choose from.
 - High accuracy achieved with Ridge regression (0.8296651410179634).
-- 
+  
 ## Prerequisites
 
 1. **Docker**: Ensure that Docker is installed on your machine. You can download Docker from [here](https://www.docker.com/get-started).
 
 2. **Docker Hub Account**: If you don't have a Docker Hub account, you'll need to create one [here](https://hub.docker.com/).
-3. 
+   
 ## Usage Docker
 
 1. Pull the Docker Image
