@@ -13,7 +13,23 @@ This project aims to provide a simple web application where users can input prop
 - Multiple machine learning models to choose from.
 - High accuracy achieved with Ridge regression (0.8296651410179634).
 
-## Usage
+## Usage Docker
+
+1. Pull the Docker Image
+
+```bash
+docker pull subho004/housepricepredictor-main-web:latest
+```
+
+2. Run the Docker Image
+
+```bash
+docker run -p 5001:5001 subho004/housepricepredictor-main-web:latest
+```
+3. Access the web application in your browser at `http://localhost:5001`.
+
+
+## Usage GitHub
 
 1. Clone the repository:
 
@@ -30,15 +46,20 @@ This project aims to provide a simple web application where users can input prop
     pip install -r requirements.txt
     ````
 
-3. Run the Flask web application:
+3. Create a .env file and add MONGODB_URL
+   ```bash
+      MONGODB_URL= <YOUR_MONGO_URL>
+   ```
+
+4. Run the Flask web application:
 
     ````bash
     flask run
     ````
 
-4. Access the web application in your browser at `http://localhost:5001`.
+5. Access the web application in your browser at `http://localhost:5001`.
 
-5. Enter the property details (area, bedrooms, bathrooms, square footage) and click the "Predict Price" button.
+6. Enter the property details (area, bedrooms, bathrooms, square footage) and click the "Predict Price" button.
 
 
 ## Model Selection
@@ -58,6 +79,11 @@ Based on our experiments, the Ridge Regression model achieved the highest accura
 - `Cleaned_Housedata.csv`: Cleaned dataset used for training and prediction.
 
 ## Screenshots
+
+### Version 2.0
+<img width="1494" alt="Screenshot 2024-01-21 at 10 54 01 AM" src="https://github.com/subho004/HousePricePredictor-main/assets/91646273/28f5dd5f-8a78-48f5-89a6-30de0f0f11e1">
+
+### Version 1.0
 ![3](https://github.com/subho004/HousePricePredictor/assets/91646273/a6b86bc0-5f88-46c2-9d60-4461880c4bc3)
 ![2](https://github.com/subho004/HousePricePredictor/assets/91646273/f12a78a3-b84d-4770-b4b7-ece017f2afed)
 ![1](https://github.com/subho004/HousePricePredictor/assets/91646273/66cbff2a-1f53-41f1-9cd9-3fb1f0331fb0)
