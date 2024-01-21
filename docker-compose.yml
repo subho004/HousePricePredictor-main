@@ -1,0 +1,14 @@
+version: "3.12.1"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_ENV: "production"
+      MONGODB_URL: mongodb+srv://vengeance004:FnlmmC1sJlKaDBZZ@cluster0.la4d8fh.mongodb.net/?retryWrites=true&w=majority
