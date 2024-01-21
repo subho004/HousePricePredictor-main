@@ -78,11 +78,30 @@ We have trained three regression models for price prediction:
 Based on our experiments, the Ridge Regression model achieved the highest accuracy (0.8296651410179634) and was selected as the default model for the application.
 
 ## Project Structure
-- `app.py`: Flask application code.
-- `static`: Static assets (CSS, JavaScript, etc.).
-- `templates`: HTML templates for the web pages.
-- `RidgeHouseModel.pkl`: Pickled Ridge Regression model for prediction.
-- `Cleaned_Housedata.csv`: Cleaned dataset used for training and prediction.
+
+
+### Files and Directories
+
+- **`app.py`**: Flask application code.
+- **`static`**: Static assets (CSS, JavaScript, etc.).
+- **`templates`**: HTML templates for the web pages.
+- **`models`**: Directory for storing machine learning models (e.g., `RidgeHouseModel.pkl`).
+- **`data`**: Directory for storing dataset files (e.g., `Cleaned_Housedata.csv`).
+
+### Docker Files
+
+- **`Dockerfile`**: This file contains instructions for building a Docker image for your application.
+
+- **`docker-compose.yml`**: A YAML file defining services, networks, and volumes. It's used for multi-container Docker applications.
+
+### Configuration Files
+
+- **`.dockerignore`**: Similar to `.gitignore`, this file specifies which files and directories should be ignored during the Docker build process.
+
+- **`.env`**: Environment file containing environment variables. It's often used to store sensitive information or configuration settings.
+
+- **`.gitignore`**: Specifies files and directories to be ignored by Git. Commonly includes files generated during development or containing sensitive information.
+
 
 ## Screenshots
 
