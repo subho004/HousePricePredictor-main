@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM python:3.12.1-slim
+FROM python:3.12.1
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -19,7 +19,6 @@ ENV PATH="/venv/bin:$PATH"
 # Install any needed packages specified in requirements.txt
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
-RUN pip3 install scikit-learn==1.2.2
 
 
 # Copy the current directory contents into the container at /app
