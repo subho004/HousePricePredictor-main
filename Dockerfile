@@ -7,7 +7,12 @@ WORKDIR /app
 # Copy the requirements file into the container at /app
 COPY requirements.txt /app/
 
-# Create and activate a virtual environment in the root folder
+# Install build essentials (including gcc)
+RUN apt-get update && \
+    apt-get install -y build-essential && \
+    rm -rf /var/lib/apt/lists/*
+
+# Create and activate a virtual environment
 RUN python3 -m venv /venv
 ENV PATH="/venv/bin:$PATH"
 
@@ -27,4 +32,4 @@ EXPOSE 5001
 ENV FLASK_ENV=production
 
 # Command to run your application
-CMD ["/bin/bash", "-c", "source /venv/bin/activate && exec /venv/bin/python -m flask run --host 0.0.0.0 --port 5001"]
+CMD [ "/bin/bash", "-c", "source /venv/bin/activate && exec /venv/bin/python -m flask run --host 0.0.0.0 --port 5001"]
